@@ -10,15 +10,15 @@ from modelgym.compare_auc_delong_xu import delong_roc_test
 
 def preprocess_cat_cols(X_train, y_train, cat_cols, X_test=None, cc=None,
                         counters_sort_col=None, learning_task=TASK_CLASSIFICATION):
-   if cc is None:
-       sort_values = None if counters_sort_col is None else X_train[:, counters_sort_col]
-       cc = CatCounter(learning_task, sort_values)
-       X_train[:,cat_cols] = cc.fit(X_train[:,cat_cols], y_train)
-   else:
-       X_train[:,cat_cols] = cc.transform(X_train[:,cat_cols])
-   if not X_test is None:
-       X_test[:,cat_cols] = cc.transform(X_test[:,cat_cols])
-   return cc
+    if cc is None:
+        sort_values = None if counters_sort_col is None else X_train[:, counters_sort_col]
+        cc = CatCounter(learning_task, sort_values)
+        X_train[:,cat_cols] = cc.fit(X_train[:,cat_cols], y_train)
+    else:
+        X_train[:,cat_cols] = cc.transform(X_train[:,cat_cols])
+    if not X_test is None:
+        X_test[:,cat_cols] = cc.transform(X_test[:,cat_cols])
+    return cc
 
 
 def elementwise_loss(y, p, learning_task=TASK_CLASSIFICATION):
