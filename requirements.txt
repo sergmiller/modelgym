@@ -1,6 +1,7 @@
 jupyter
 numpy
 scipy
+scikit-garden
 scikit-learn>=0.18
 matplotlib
 pandas

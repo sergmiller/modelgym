@@ -5,25 +5,6 @@ virtualenv:
 before_install:
   - pyenv global system 3.6
 install:
-  - pip3 install -r requirements.txt
-  - pip3 install .
-  - gem install rake
-  - pip install --upgrade setuptools
-  - git clone --recursive https://github.com/Microsoft/LightGBM
-  - cd LightGBM
-  - git checkout 80c641cd17727bebea613af3cbfe3b985dbd3313
-  - mkdir build && cd build && cmake -DUSE_MPI=ON ..
-  - make -j
-  - cd ../python-package/ && python3 setup.py install
-  - cd ../../
-  - rm -rf LightGBM
-
-  - git clone --recursive https://github.com/dmlc/xgboost
-  - cd xgboost
-  - git checkout 14fba01b5ac42506741e702d3fde68344a82f9f0
-  - make -j
-  - cd python-package; python3 setup.py install
-  - cd ../../
-  - rm -rf xgboost
+  - pip install -r requirements.txt
 script: 
   - pytest
