@@ -4,8 +4,8 @@ virtualenv:
   system_site_packages: true
 before_install:
   - pyenv global system 3.6
-  - pip3 install numpy scipy jupyter pyyaml hyperopt scikit-optimize pandas networkx==1.11    
 install:
+  - pip3 install -r requirements.txt
   - pip3 install .
   - gem install rake
   - pip install --upgrade setuptools
