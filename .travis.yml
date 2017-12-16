@@ -1,4 +1,6 @@
 language: python3
+before_install:
+  - pyenv global system 3.6
 install:
   - gem install rake
 channels:
