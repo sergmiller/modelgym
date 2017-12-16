@@ -19,4 +19,4 @@ dependencies:
     - pyyaml==3.12
     - pytest==3.2.1
     - scikit-optimize==0.4
-script: pytest
+script: py.test
