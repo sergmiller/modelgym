@@ -1,4 +1,5 @@
 language: python3
+sudo: required
 before_install:
   - pyenv global system 3.6
 channels:
