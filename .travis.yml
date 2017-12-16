@@ -1,12 +1,14 @@
 language: python3
 python:
   - "3.6"
+sudo: required
+dist: trusty
 install:
   - gem install rake
 channels:
   - conda-forge
 dependencies:
-  - python=3.6
+  - python=3
   - numpy=1.12.*
   - pandas=0.19.*
   - scipy=0.19.*
