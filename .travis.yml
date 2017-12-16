@@ -16,6 +16,6 @@ dependencies:
   - xgboost=0.6a2
   - lightgbm=2.0.4
 install:
-  - pip install -r requirements.txt
+  - pip333 install -r requirements.txt
 script: 
   - pytest
