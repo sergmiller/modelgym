@@ -1,12 +1,12 @@
 language: python3
 sudo: required
+virtualenv:
+  system_site_packages: true
 before_install:
   - pyenv global system 3.6
-  - pip3 install virtualenv
-  - python3 -m venv venv 
-  - source venv/bin/activate
   - pip3 install jupyter pyyaml hyperopt scikit-optimize pandas networkx==1.11    
 install:
+  - pip3 install .
   - gem install rake
   - pip install --upgrade setuptools
   - git clone --recursive https://github.com/Microsoft/LightGBM
