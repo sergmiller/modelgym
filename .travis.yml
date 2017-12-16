@@ -17,7 +17,7 @@ dependencies:
 install:
   - gem install rake
   - pip install --upgrade setuptools
-  - pip3 install numpy jupyter pyyaml hyperopt scikit-optimize pandas networkx==1.11
+  - pip3 install numpy scipy jupyter pyyaml hyperopt pandas networkx==1.11
   - git clone --recursive https://github.com/Microsoft/LightGBM
   - cd LightGBM
   - git checkout 80c641cd17727bebea613af3cbfe3b985dbd3313
