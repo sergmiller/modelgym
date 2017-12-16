@@ -1,4 +1,6 @@
 language: python3
+python:
+  - "3.6"
 install:
   - gem install rake
 channels:
@@ -19,4 +21,4 @@ dependencies:
     - pyyaml==3.12
     - pytest==3.2.1
     - scikit-optimize==0.4
-script: py.test
+script: pytest
