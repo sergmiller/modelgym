@@ -5,6 +5,6 @@ virtualenv:
 before_install:
   - pyenv global system 3.6
 install:
-  - pip install -r requirements.txt
+  - sudo pip install -r requirements.txt
 script: 
   - pytest
