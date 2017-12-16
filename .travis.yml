@@ -1,23 +1,13 @@
 language: python3
 sudo: required
 before_install:
-  - pyenv global system 3.6
-channels:
-  - conda-forge
-dependencies:
-  - python=3
-  - numpy=1.12.*
-  - pandas=0.19.*
-  - scipy=0.19.*
-  - scikit-learn=0.18.*
-  - openmpi=2.1.1
-  - networkx=1.11
-  - xgboost=0.6a2
-  - lightgbm=2.0.4
+  - pip3 install virtualenv
+  - python3 -m venv venv
+  - source venv/bin/activate
+  - pip3 install jupyter pyyaml hyperopt scikit-optimize pandas networkx==1.11    
 install:
   - gem install rake
   - pip install --upgrade setuptools
-  - pip3 install numpy scipy jupyter pyyaml hyperopt pandas networkx==1.11
   - git clone --recursive https://github.com/Microsoft/LightGBM
   - cd LightGBM
   - git checkout 80c641cd17727bebea613af3cbfe3b985dbd3313
