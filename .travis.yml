@@ -1,8 +1,6 @@
 language: python3
 before_install:
   - pyenv global system 3.6
-install:
-  - gem install rake
 channels:
   - conda-forge
 dependencies:
@@ -16,6 +14,8 @@ dependencies:
   - xgboost=0.6a2
   - lightgbm=2.0.4
 install:
+  - gem install rake
+  - pip3 install jupyter pyyaml hyperopt scikit-optimize pandas networkx==1.11
   - git clone --recursive https://github.com/Microsoft/LightGBM
   - cd LightGBM
   - git checkout 80c641cd17727bebea613af3cbfe3b985dbd3313
@@ -32,7 +32,5 @@ install:
   - cd python-package; python3 setup.py install
   - cd ../../
   - rm -rf xgboost
-
-  - pip3 install -r requirements.txt
 script: 
   - pytest
