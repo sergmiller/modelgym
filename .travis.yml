@@ -1,5 +1,6 @@
 language: python3
 python:
+  - "3.5"
   - "3.6"
 install:
   - gem install rake
@@ -15,11 +16,7 @@ dependencies:
   - networkx=1.11
   - xgboost=0.6a2
   - lightgbm=2.0.4
-  - pip:
-    - hyperopt==0.1
-    - pymongo==3.4.0
-    - pyyaml==3.12
-    - scikit-optimize==0.4
-    - pytest>=3.2.1
+install:
+  - pip install -r requirements.txt
 script: 
   - pytest
