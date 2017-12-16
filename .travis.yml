@@ -5,6 +5,7 @@ virtualenv:
 before_install:
   - pyenv global system 3.6
 install:
+  - sudo apt-get install python3-pip
   - sudo pip3 install .
   - sudo pip3 install -r requirements.txt
 script: 
