@@ -2,6 +2,7 @@ language: python3
 sudo: required
 before_install:
   - pyenv global system 3.6
+  - pip3 install virtualenv
   - python3 -m venv venv 
   - source venv/bin/activate
   - pip3 install jupyter pyyaml hyperopt scikit-optimize pandas networkx==1.11    
