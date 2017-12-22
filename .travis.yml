@@ -11,7 +11,5 @@ before_install:
   - git clone https://github.com/yandexdataschool/modelgym.git
   - cd ./modelgym
   - docker pull modelgym/dockers 
-  - docker run -ti --rm  -v "$(pwd)":/src  -p 7777:8888    modelgym/dockers:latest  bash --login
+  - docker run -ti --rm  -v "$(pwd)":/src  -p 7777:8888    modelgym/dockers:latest  bash --login -ci "pip install catboost networkx==1.11 &&  pytest"
 
-script:
-  - pytest
