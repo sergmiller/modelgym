@@ -11,7 +11,7 @@ Gym for predictive models
   :target: http://modelgym.readthedocs.io/en/latest/?badge=latest
   :alt: Documentation Status
   
-.. image:: https://travis-ci.org/sergmiller/modelgym?branch=master
+.. image:: https://travis-ci.org/sergmiller/modelgym.svg?branch=master
   :target: https://travis-ci.org/sergmiller/modelgym
   :alt: Build Status
 
