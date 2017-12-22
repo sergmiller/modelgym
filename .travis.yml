@@ -5,7 +5,7 @@ before_install:
   - cd test
 
 install:
-  - git clone https://github.com/sergmiller/modelgym.git
+  - git clone -b make_modelgym_great_again https://github.com/fminkin/modelgym.git
   - cd ./modelgym
   - docker pull modelgym/dockers
 
