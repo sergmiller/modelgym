@@ -1,7 +1,15 @@
+sudo: required
+
 language: python
-python:
-  - "3.6"
-install:
-  - sudo pip install -r requirements.txt
-script: 
+
+services:
+  - docker
+
+before_install:
+  - git clone https://github.com/yandexdataschool/modelgym.git
+  - cd ./modelgym
+  - docker pull modelgym/dockers 
+  - docker run -ti --rm  -v "$(pwd)":/src  -p 7777:8888    modelgym/dockers:latest  bash --login
+
+script:
   - pytest
