@@ -1,12 +1,10 @@
 language: python3
-sudo: required
 virtualenv:
   system_site_packages: true
 before_install:
   - pyenv global system 3.6
 install:
   - sudo apt-get install python3-pip
-  - sudo pip3 install .
   - sudo pip3 install -r requirements.txt
 script: 
   - pytest
