@@ -2,14 +2,15 @@ sudo: required
 
 language: python
 
-services:
-  - docker
-
 before_install:
   - mkdir test
   - cd test
+
+install:
   - git clone https://github.com/sergmiller/modelgym.git
   - cd ./modelgym
-  - docker pull modelgym/dockers 
+  - docker pull modelgym/dockers
+
+script:
   - docker run -ti --rm  -v "$(pwd)":/src  -p 7777:8888    modelgym/dockers:latest  bash --login -ci "cd src/ && pip install catboost networkx==1.11 && pytest"
 
