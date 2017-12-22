@@ -6,6 +6,8 @@ services:
   - docker
 
 before_install:
+  - mkdir test
+  - cd test
   - git clone https://github.com/yandexdataschool/modelgym.git
   - cd ./modelgym
   - docker pull modelgym/dockers 
